@@ -141,13 +141,14 @@ function App() {
             <tbody>
               {filteredRows.map((row, idx) => {
                 const fruit = String(row['Fruit'] ?? '')
+                const form = String(row['Form'] ?? '')
                 const priceRaw = String(row['RetailPrice'] ?? '')
                 const unit = String(row['RetailPriceUnit'] ?? '')
                 const price = Number.parseFloat(priceRaw)
                 const priceDisplay = Number.isFinite(price) ? price.toFixed(2) : priceRaw
                 return (
                   <tr key={idx}>
-                    <td>{fruit}: ${priceDisplay} {unit}</td>
+                    <td>{fruit}{form ? ` (${form})` : ''}: ${priceDisplay} {unit}</td>
                   </tr>
                 )
               })}
