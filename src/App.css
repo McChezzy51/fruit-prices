@@ -40,3 +40,69 @@
 .read-the-docs {
   color: #888;
 }
+
+.subtitle {
+  margin-top: -0.5rem;
+  color: #888;
+}
+
+.toolbar {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 360px;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: inherit;
+}
+
+.status {
+  margin: 1rem 0;
+}
+
+.status.error {
+  color: #ff6b6b;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.dataTable th,
+.dataTable td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #333;
+}
+
+.dataTable thead th {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: light) {
+  .searchInput {
+    background-color: #ffffff;
+    border-color: #dddddd;
+  }
+  .dataTable th,
+  .dataTable td {
+    border-bottom: 1px solid #eeeeee;
+  }
+  .dataTable thead th {
+    background: #fafafa;
+  }
+}
